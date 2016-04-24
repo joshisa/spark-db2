@@ -41,7 +41,7 @@ class DefaultSource extends CreatableRelationProvider with DataSourceRegister wi
     val conn : Connection = getConnection(url, props)
 
     try {
-      var tableExists = JdbcUtils.tableExists(conn, url, table)
+      var tableExists = JdbcUtils.tableExists(conn, table)
 
       if (mode == SaveMode.Ignore && tableExists) {
         return
@@ -83,7 +83,7 @@ class DefaultSource extends CreatableRelationProvider with DataSourceRegister wi
     val conn : Connection = getConnection(url, props)
 
     try {
-      var tableExists = JdbcUtils.tableExists(conn, url, table)
+      var tableExists = JdbcUtils.tableExists(conn, table)
       if (!tableExists) {
         sys.error(s"Table $table does not exist.")
       }
