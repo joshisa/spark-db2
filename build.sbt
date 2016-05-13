@@ -25,7 +25,7 @@ resolvers += "Typesafe Repo" at "http://repo.typesafe.com/typesafe/releases/"
 resolvers += "Sonatype Repository" at "http://oss.sonatype.org/content/repositories/releases"
 
 // Spark dependencies as provided as they are available in spark runtime
-val sparkDependency = "1.5.2"
+val sparkDependency = "1.6.0"
 val commonsCSV = "1.2"
 
 libraryDependencies += "org.apache.spark"   %% "spark-core"        % sparkDependency  % "provided"
